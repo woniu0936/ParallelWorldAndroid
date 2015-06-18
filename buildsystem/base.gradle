@@ -1,0 +1,67 @@
+
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "21.1.2"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 21
+    androidCompileSdkVersion = 21
+    androidApplicationId = 'com.dxns.parallelworld'
+    androidVersionCode = 1
+    androidVersionName = "1.0"
+
+    //
+    daggerVersion = '2.0'
+    butterKnifeVersion = '6.0.0'
+    recyclerViewVersion = '21.0.3'
+    rxJavaVersion = '1.0.9'
+    rxAndroidVersion = '0.24.0'
+    javaxAnnotationVersion = '10.0-b28'
+    gsonVersion = '2.3'
+    okHttpVersion = '2.1.0'
+    okHttpUrlconnectionVersion = '2.1.0'
+    androidAnnotationsVersion = '20.0.0'
+
+    robolectricVersion = '2.4'
+    jUnitVersion = '4.11'
+    mockitoVersion = '1.9.5'
+    dexmakerVersion = '1.0'
+    espressoVersion = '2.0'
+    testingSupportLibVersion = '0.1'
+    multidexVersion = '1.0.0'
+    sprinklesVersion ='1.3.0'
+    frescoVersion = '0.5.0+'
+    v7Version = "22.2.0"
+    retrofitVersion = "1.9.0"
+    CommomDependencies = [
+            daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger:             "com.google.dagger:dagger:${daggerVersion}",
+            butterKnife:        "com.jakewharton:butterknife:${butterKnifeVersion}",
+            recyclerView:       "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+            rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid:          "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+            mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker:           "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito:    "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso:           "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            testingSupportLib:  "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+            junit:              "junit:junit:${jUnitVersion}",
+            okHttp:             "com.squareup.okhttp:okhttp:${okHttpVersion}",
+            okHttpUrlconnection:             "com.squareup.okhttp:okhttp-urlconnection:${okHttpUrlconnectionVersion}",
+            gson:               "com.google.code.gson:gson:${gsonVersion}",
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+            multidex:           "com.android.support:multidex:${multidexVersion}",
+            sprinkles:          "se.emilsjolander:sprinkles:${sprinklesVersion}",
+            fresco:             "com.facebook.fresco:fresco:${frescoVersion}",
+            appcompat_v7:       "com.android.support:appcompat-v7:${v7Version}",
+            retrofit:           "com.squareup.retrofit:retrofit:${retrofitVersion}"
+    ]
+}
