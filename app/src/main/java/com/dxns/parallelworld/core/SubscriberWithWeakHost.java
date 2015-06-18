@@ -1,5 +1,10 @@
-package com.dxns.parallelworld;
+package com.dxns.parallelworld.core;
 
+
+import android.widget.Toast;
+
+import com.dxns.parallelworld.R;
+import com.dxns.parallelworld.util.ToastUtils;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Modifier;
@@ -19,7 +24,7 @@ import rx.Subscriber;
  * 最近修改时间:2014/12/29 10:22<br>
  * 禁止作为非静态内部类使用，通过weakref引用宿主对象
  *
- * @author pwy
+ * @author grenn
  * @since 2014/4/8
  */
 public class SubscriberWithWeakHost<T, H> extends Subscriber<T> {
@@ -57,7 +62,6 @@ public class SubscriberWithWeakHost<T, H> extends Subscriber<T> {
     }
 
     public void doOnError(Throwable e) {
-//        ToastUtils.showWhenDebug(e.getMessage(), Toast.LENGTH_SHORT);
     }
 
     public void doOnNext(T item) {
@@ -69,8 +73,7 @@ public class SubscriberWithWeakHost<T, H> extends Subscriber<T> {
         try {
             doOnCompleted();
         } catch (Exception e) {
-//            ExceptionUtil.handleException(MEApplication.get(), e);
-            e.printStackTrace();
+            ExceptionHandler.handleException(ParallelwordApplacation.get(), e);
         }
     }
 
@@ -79,7 +82,7 @@ public class SubscriberWithWeakHost<T, H> extends Subscriber<T> {
         try {
             doOnError(e);
         } catch (Exception e2) {
-//            ExceptionUtil.handleException(MEApplication.get(), e2);
+            ExceptionHandler.handleException(ParallelwordApplacation.get(), e2);
             e2.printStackTrace();
         }
     }
@@ -88,9 +91,9 @@ public class SubscriberWithWeakHost<T, H> extends Subscriber<T> {
     final public void onNext(T t) {
         try {
             doOnNext(t);
-        } catch (OutOfMemoryError e) {
-//            ToastUtils.show(MEApplication.get().getString(R.string.encode_low_memory), Toast.LENGTH_SHORT);
-            e.printStackTrace();
+        } catch (Exception e3) {
+            ExceptionHandler.handleException(ParallelwordApplacation.get(), e3);
+
         }
     }
 

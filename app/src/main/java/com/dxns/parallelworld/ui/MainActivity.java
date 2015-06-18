@@ -1,4 +1,4 @@
-package com.dxns.parallelworld;
+package com.dxns.parallelworld.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import com.dxns.data.api.Api;
 import com.dxns.data.model.StatuData;
+import com.dxns.parallelworld.R;
+import com.dxns.parallelworld.core.SubscriberWithWeakHost;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -29,7 +31,7 @@ public class MainActivity extends Activity {
 
     private void fechData() {
 
-        Api.getApi().Login()
+        Api.getUserApi().Login()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new sus(this));
 

@@ -1,5 +1,7 @@
 package com.dxns.data.api;
 
+import com.dxns.data.service.UserServices;
+
 import retrofit.RestAdapter;
 
 /**
@@ -13,12 +15,12 @@ import retrofit.RestAdapter;
 public class Api {
 
 
-    public static Services getApi() {
+    public static UserServices getUserApi() {
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint("http://parallelworld.kingty.club")
                 .build();
 
-        Services api = restAdapter.create(Services.class);
+        UserServices api = restAdapter.create(UserServices.class);
 
         return api;
     }

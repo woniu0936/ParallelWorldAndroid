@@ -1,4 +1,4 @@
-package com.dxns.data.api;
+package com.dxns.data.service;
 
 import com.dxns.data.model.StatuData;
 
@@ -13,7 +13,7 @@ import rx.Observable;
  * @date
  * @since 15/6/17 下午10:47
  */
-public interface Services {
+public interface UserServices {
     //@Field("emial") String email, @Field("password") String password
     @GET("/user.html")
     Observable<StatuData> Login();
