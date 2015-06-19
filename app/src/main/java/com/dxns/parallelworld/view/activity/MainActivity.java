@@ -1,4 +1,4 @@
-package com.dxns.parallelworld.ui;
+package com.dxns.parallelworld.view.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
