@@ -35,7 +35,6 @@ public class ParallelwordApplacation extends android.support.multidex.MultiDexAp
     @Override
     public void onCreate() {
         super.onCreate();
-//        FacebookSdk.sdkInitialize(getApplicationContext());
         Fresco.initialize(getApplicationContext());
         application = this;
         PackageManager packageManager = getPackageManager();

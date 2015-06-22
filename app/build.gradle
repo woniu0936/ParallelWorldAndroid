@@ -37,7 +37,7 @@ android {
 dependencies {
     def CommomDependencies = rootProject.ext.CommomDependencies
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':data')
+//    compile project(':data')
 //    compile project(':util')
     compile CommomDependencies.androidAnnotations
     compile CommomDependencies.gson
@@ -49,5 +49,8 @@ dependencies {
     compile CommomDependencies.appcompat_v7
     compile CommomDependencies.retrofit
     compile CommomDependencies.butterKnife
+    compile CommomDependencies.androidAnnotations
+    compile CommomDependencies.sprinkles
+    compile CommomDependencies.retrofit
 
 }

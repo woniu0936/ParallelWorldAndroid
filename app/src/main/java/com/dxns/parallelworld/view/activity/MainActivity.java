@@ -4,10 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.dxns.data.api.Api;
-import com.dxns.data.model.StatuData;
 import com.dxns.parallelworld.R;
+import com.dxns.parallelworld.core.ParallelwordApplacation;
 import com.dxns.parallelworld.core.SubscriberWithWeakHost;
+import com.dxns.parallelworld.data.api.Api;
+import com.dxns.parallelworld.data.model.StatuData;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
         public void doOnNext(StatuData statuData) {
 
             if (statuData != null) {
-                getHost().text.setText(statuData.message);
+                getHost().text.setText(statuData.message+":"+ ParallelwordApplacation.getPackageInfo().versionName);
 
             }
         }

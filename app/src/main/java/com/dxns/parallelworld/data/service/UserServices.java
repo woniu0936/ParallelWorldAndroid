@@ -1,6 +1,6 @@
-package com.dxns.data.service;
+package com.dxns.parallelworld.data.service;
 
-import com.dxns.data.model.StatuData;
+import com.dxns.parallelworld.data.model.StatuData;
 
 import retrofit.http.GET;
 import rx.Observable;

@@ -1,4 +1,4 @@
-package com.dxns.data.model;
+package com.dxns.parallelworld.data.model;
 
 /**
  * @author kingty

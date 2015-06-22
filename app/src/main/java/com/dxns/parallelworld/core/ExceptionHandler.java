@@ -5,7 +5,9 @@ import android.os.Looper;
 import android.widget.Toast;
 
 import com.dxns.parallelworld.R;
-import com.dxns.parallelworld.exception.AuthException;
+
+
+import com.dxns.parallelworld.data.exception.AuthException;
 import com.dxns.parallelworld.util.ToastUtils;
 
 import rx.android.schedulers.AndroidSchedulers;
@@ -43,7 +45,10 @@ public class ExceptionHandler {
         }
         if(e instanceof AuthException){
             //处理验证异常
+            e.printStackTrace();
         }
+
+        e.printStackTrace();
         //添加其他异常处理
     }
 

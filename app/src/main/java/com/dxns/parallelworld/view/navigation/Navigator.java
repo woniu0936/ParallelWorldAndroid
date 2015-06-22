@@ -1,4 +1,4 @@
-package com.dxns.parallelworld.navigation;
+package com.dxns.parallelworld.view.navigation;
 
 /**
  * 统一管理项目中的跳转
